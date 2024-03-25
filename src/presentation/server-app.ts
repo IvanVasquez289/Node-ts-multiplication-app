@@ -16,7 +16,7 @@ export class ServerApp{
         const wasCreated = new SaveFile()
             .execute({
                 fileContent:table,
-                destination: `${destination}/table-${base}`,
+                destination: `${destination}`,
                 fileName: name
             })
 
@@ -24,7 +24,7 @@ export class ServerApp{
         if(showTable) console.log(table);
         (wasCreated)
             ? console.log('File Created')
-            : console.log('File not created')
+            : console.error('File not created')
         
        
     }
